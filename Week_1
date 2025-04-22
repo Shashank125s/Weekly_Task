@@ -1,0 +1,31 @@
+Week 1: Learning Spring Boot – Starter Dependencies
+
+This week, I focused on understanding and implementing Spring Boot Starter Dependencies through a hands-on project. The objective was to set up a basic Spring Boot application and explore how starter dependencies simplify development by managing required libraries and configurations.
+
+Key Takeaways
+Spring Boot Starters
+Spring Boot offers pre-configured sets of dependencies such as spring-boot-starter-web for web development and spring-boot-starter-data-jpa for database operations. These starters streamline project setup and reduce the risk of version conflicts.
+
+Auto-Configuration
+One of Spring Boot’s powerful features is auto-configuration. It automatically configures beans based on the dependencies found in the classpath, reducing boilerplate code and increasing development efficiency.
+
+Challenges and Solutions
+Dependency Version Conflicts
+Initially, I encountered issues due to conflicting dependency versions. These were resolved by explicitly defining the required versions in the pom.xml file.
+
+Customizing Default Behavior
+By modifying the application.properties file, I was able to override default configurations, such as changing the embedded server port and adjusting database connection settings.
+
+Practical Insights
+Understanding how starter dependencies work is fundamental to building scalable and maintainable Spring Boot applications. It allows developers to focus on core business logic without getting bogged down in dependency management.
+
+Eager vs. Lazy Loading in JPA
+While exploring Spring Data JPA, I examined the difference between Eager and Lazy loading strategies. Eager loading fetches related entities immediately, which can lead to performance issues in complex queries. Lazy loading, on the other hand, loads related data only when accessed, offering better performance in large applications.
+
+Next Steps
+In the upcoming weeks, I plan to:
+
+Develop RESTful APIs using Spring Boot
+
+Implement and integrate database operations with Spring Data JPA
+
