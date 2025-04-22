@@ -1,0 +1,27 @@
+Week 4 – One-to-One, One-to-Many, and Many-to-One Mapping in Spring Boot
+My Week 4 of Learning Spring Boot
+
+This week, I focused on implementing entity relationships in Spring Boot, specifically One-to-One, One-to-Many, and Many-to-One mappings. Additionally, I worked with DTOs (Data Transfer Objects) to optimize data transfer between layers of the application.
+
+Key Takeaways:
+1. One-to-One Mapping
+I implemented One-to-One relationships using the @OneToOne annotation and @JoinColumn for the foreign key relationship. This allowed me to model direct entity relationships efficiently.
+
+2. One-to-Many & Many-to-One Mapping
+With One-to-Many and Many-to-One relationships, I structured the database to represent parent-child relationships using the @OneToMany and @ManyToOne annotations.
+
+3. Implementing DTOs (Data Transfer Objects)
+To improve performance and security, I utilized DTOs to transfer only the required data to the client. Instead of sending full entity objects, I used DTOs to format API responses, reducing unnecessary data exposure.
+
+Challenges & Solutions:
+1. Lazy Initialization Issues
+I faced challenges when fetching related entities due to lazy loading. The solution was to use DTOs and write custom JPQL queries with JOIN FETCH, which allowed me to fetch related data on demand, thus optimizing performance.
+
+2. Bidirectional Relationships & Infinite Recursion
+Managing bidirectional relationships initially led to infinite recursion when serializing entities to JSON. This was resolved by using @JsonIgnore and @JsonManagedReference to prevent cyclic dependencies in the JSON response.
+
+Practical Application:
+Understanding entity relationships and implementing DTOs is essential for building scalable applications and optimizing API responses. These concepts are key in scenarios like e-commerce platforms and content management systems, where structured data handling is crucial.
+
+What’s Next:
+Next, I’m excited to dive into Many-to-Many relationships, criteria queries, and caching to further optimize database interactions.
