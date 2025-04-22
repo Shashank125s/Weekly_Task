@@ -1,0 +1,44 @@
+Week 3 – Paging & Sorting in Spring Boot
+My Week 3 of Learning Spring Boot
+
+This week, I focused on implementing Paging and Sorting using Pageable and Sort in Spring Boot with Spring Data JPA. The goal was to efficiently retrieve and display large datasets in a structured and performant way.
+
+📌 Key Takeaways
+1. Paging & Sorting in Spring Boot
+Spring Boot, via Spring Data JPA, provides first-class support for pagination and sorting through the Pageable and Sort interfaces. These features help manage large datasets more effectively and improve overall application performance.
+
+2. Pagination with Pageable
+I used the PageRequest.of(page, size) method to implement pagination. This allowed fetching limited data per request, reducing load on the database and enhancing responsiveness in applications that handle large data volumes.
+
+3. Sorting with Sort
+The Sort class allows dynamic sorting of records. By using:
+
+java
+Copy
+Edit
+Sort.by("fieldName").ascending()
+Sort.by("fieldName").descending()
+I was able to implement flexible and user-defined sorting behavior.
+
+⚙️ Challenges and Solutions
+Handling Large Datasets
+Initially, retrieving all records at once caused performance issues. Pagination using Pageable resolved this by limiting the data fetched per request.
+
+Combining Paging and Sorting
+I implemented combined functionality using:
+
+java
+Copy
+Edit
+Pageable pageable = PageRequest.of(page, size, Sort.by("field").descending());
+This enabled users to retrieve structured, sorted data efficiently.
+
+💡 Practical Application
+Paging and sorting are crucial for building scalable, user-friendly, and high-performance applications. These features not only improve the user experience but also optimize resource usage on the server and database side.
+
+📈 What’s Next
+Next, I plan to:
+
+Integrate pagination and sorting with Spring Boot REST APIs
+
+Apply these concepts in a real-world application scenario
